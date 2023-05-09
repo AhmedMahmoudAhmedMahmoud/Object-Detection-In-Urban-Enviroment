@@ -153,3 +153,15 @@ Learning Rate
 
 
 ![MobileNet](https://github.com/AhmedMahmoudAhmedMahmoud/Object-Detection-In-Urban-Enviroment/assets/130584964/610ac98d-3792-40b0-a80a-d381e8fcbcb2)
+
+Resnet50 achieved lower loss values earlier than both EfficientNet and MobileNet models, as evident from the results obtained. EfficientNet took comparatively more steps to minimize the loss than MobileNet.And MobileNet could not detect the pedestrian while the EfficientDet was able to detect it.
+
+The provided testing frames were all successfully analyzed by the three models in terms of vehicle detection. However, upon closer examination, it was found that MobileNet detected vehicles with some additional noise, which was not present in the results of the EfficientNet and ResNet50 models.
+
+For the most part, ResNet50 and MobileNet models were able to detect pedestrians, although MobileNet struggled with critical cases. On the other hand, EfficientNet consistently detected pedestrians with minimal noise throughout the entire testing phase.
+
+Due to a low number of training and validation steps, none of the three models were able to detect the presence of cyclists.
+
+After analyzing the training results through TensorBoard, along with the detection outcomes on test samples, it was determined that the pre-trained EfficientNet D1 model was the optimal choice for deployment out of the three tested models, based on its total loss and mAP values.
+
+We can improve the performance of the tested models by Increasing the amount of training data, Fine-tuning the pre-trained models, Tuning the hyperparameters, Using data augmentation.
